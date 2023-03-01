@@ -16,3 +16,5 @@ while True:
         break
     else:
         print("Erro: Digite apenas 0 ou 1")
+
+arduino.exit()
