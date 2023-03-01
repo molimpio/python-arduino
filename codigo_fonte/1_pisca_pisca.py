@@ -1,8 +1,8 @@
-import pyfirmata
+from pyfirmata import Arduino, OUTPUT
 from constantes import PORTA_COMUNICACAO, PINO_13
 
-arduino = pyfirmata.Arduino(PORTA_COMUNICACAO)
-arduino.digital[PINO_13].mode = pyfirmata.OUTPUT
+arduino = Arduino(PORTA_COMUNICACAO)
+arduino.digital[PINO_13].mode = OUTPUT
 
 while True:
     arduino.digital[PINO_13].write(1)
