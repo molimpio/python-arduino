@@ -1,3 +1,7 @@
+"""
+Exemplo de pisca pisca com delay de 0.5
+"""
+
 from pyfirmata import Arduino, OUTPUT
 from constantes import PORTA_COMUNICACAO, PINO_13
 
