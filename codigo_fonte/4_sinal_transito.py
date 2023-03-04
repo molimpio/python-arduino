@@ -1,5 +1,5 @@
 """
-Exemplo de sinal de transito com leds vermelho, amarelo e verde
+Exemplo de sinal de trânsito para veículos com leds vermelho, amarelo e verde
 """
 
 from pyfirmata import Arduino, OUTPUT
