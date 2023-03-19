@@ -4,4 +4,9 @@ PINO_12 = 12
 PINO_11 = 11
 PINO_10 = 10
 PINO_9 = 9
+PINO_6 = 6
+PINO_5 = 5
+PINO_2 = 2
+ANALOG_0 = 0
+
 

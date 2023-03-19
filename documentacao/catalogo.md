@@ -12,3 +12,5 @@ Diodo emissor de luz que acende quando a eletricidade para através dele na dire
 ## Protoboard
 Placa de ensaio pequena para realização de experimentos.
 
+## Push button
+Chave que fecha o circuito quando é pressionada.

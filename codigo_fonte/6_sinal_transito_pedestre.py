@@ -19,15 +19,22 @@ arduino.digital[verde_pedestre].mode = OUTPUT
 arduino.digital[vermelho_pedestre].mode = OUTPUT
 
 while True:
+    # Livre para pedestre
     arduino.digital[vermelho_veiculo].write(1)
     arduino.digital[verde_pedestre].write(1)
     arduino.pass_time(5.0)
+
+    # Livre para veiculo
     arduino.digital[verde_veiculo].write(1)
     arduino.digital[vermelho_pedestre].write(1)
     arduino.digital[vermelho_veiculo].write(0)
     arduino.digital[verde_pedestre].write(0)
-    arduino.pass_time(3.0)
+    arduino.pass_time(5.0)
+
+    # Amarelo para veiculo
     arduino.digital[verde_veiculo].write(0)
     arduino.digital[amarelo_veiculo].write(1)
+
     arduino.pass_time(5.0)
     arduino.digital[amarelo_veiculo].write(0)
+    arduino.digital[vermelho_pedestre].write(0)
