@@ -1,0 +1,23 @@
+"""
+Exemplo que controla a intensidade do led conforme giro do potenciometro.
+"""
+
+from pyfirmata import Arduino, PWM, util
+from constantes import PORTA_COMUNICACAO, ANALOG_0, PINO_9
+
+arduino = Arduino(PORTA_COMUNICACAO)
+
+iterator = util.Iterator(arduino)
+iterator.start()
+
+arduino.analog[ANALOG_0].enable_reporting()
+arduino.digital[PINO_9].mode = PWM
+
+while True:
+    valor = str(arduino.analog[ANALOG_0].read())
+    print("VALOR: ", valor)
+
+    if valor != "None":
+        valor = float(valor)
+        arduino.digital[PINO_9].write(valor)
+        arduino.pass_time(0.05)
